@@ -232,7 +232,7 @@ Algo así:
 
 ![image](https://github.com/Jose47Morales/BalanceDeCargasRyu/assets/149639682/8a3de2d1-c536-4efb-89ef-d64ee7000508)
 
-Una vez hecho e ping, en la terminal donde ejecutamos Ryu, se evidenciará el envio de paquetes:
+Una vez hecho el ping, en la terminal donde ejecutamos Ryu, se evidenciará el envio de paquetes:
 
 ![image](https://github.com/Jose47Morales/BalanceDeCargasRyu/assets/149639682/e7668069-dfbf-4f15-9e3d-54311cca2a30)
 
