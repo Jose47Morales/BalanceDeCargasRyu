@@ -29,3 +29,26 @@ Deberá verse como esto:
 
 ![image](https://github.com/Jose47Morales/BalanceDeCargasRyu/assets/149639682/9054d02f-4bb4-4531-b690-4c7df1569ff3)
 
+### **Paso 2:** Instalar dependencias
+
+Instala dependencias necesarias, incluyendo Python y pip:
+
+```bash
+sudo apt-get install python3-pip git
+```
+
+Obtendrás algo asi:
+
+![Uploading image.png…]()
+
+### **Paso 3:** Instalar Ryu
+
+Instala Ryu usando pip:
+
+```bash
+pip3 install ryu
+```
+
+Debería verse algo así:
+
+![Uploading image.png…]()
