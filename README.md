@@ -191,3 +191,49 @@ class LoadBalancer(app_manager.RyuApp):
         out = parser.OFPPacketOut(datapath=datapath, buffer_id=msg.buffer_id, in_port=in_port, actions=actions, data=data)
         datapath.send_msg(out)
 ```
+
+## Ejecución
+
+### **Paso 1:** Ejecutar Mininet
+
+Ejecuta el script de Mininet para iniciar la topología de red:
+
+```bash
+sudo python3 wifi_topology.py
+```
+
+Debería verse algo así:
+
+![image](https://github.com/Jose47Morales/BalanceDeCargasRyu/assets/149639682/3cc609cb-c503-4f83-8078-61358f8d05c9)
+
+### **Paso 2:** Ejecutar el controlador Ryu
+
+En una nueva terminal, ejecuta el controlador Ryu:
+
+```bash
+ryu-manager load_balancer.py
+```
+
+Obtendrás algo como esto:
+
+![image](https://github.com/Jose47Morales/BalanceDeCargasRyu/assets/149639682/9b289651-bc96-4a7c-841c-f9300e243b4e)
+
+### **Paso 3:** Probar la configuración
+
+Verifica la conectividad entre los hosts usando la CLI de Mininet:
+
+```bash
+mininet> pingall
+```
+
+Si los hosts pueden hacer ping entre ellos, significa que la configuración está funcionando correctamente.
+
+Algo así:
+
+![image](https://github.com/Jose47Morales/BalanceDeCargasRyu/assets/149639682/8a3de2d1-c536-4efb-89ef-d64ee7000508)
+
+Una vez hecho e ping, en la terminal donde ejecutamos Ryu, se evidenciará el envio de paquetes:
+
+![image](https://github.com/Jose47Morales/BalanceDeCargasRyu/assets/149639682/e7668069-dfbf-4f15-9e3d-54311cca2a30)
+
+Con esto, hemos finalizado el balance de cargas utilizando el controlador de Ryu y Mininet!
